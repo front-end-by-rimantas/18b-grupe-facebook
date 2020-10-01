@@ -6,12 +6,12 @@ body {
         "menu feed msg";
 }
 
-header {
+body > header {
     grid-area: hed;
     background-color: #36f;
 }
 
-aside {
+body > aside {
     background-color: #f5f5f5;
 }
 .menu {
@@ -21,7 +21,7 @@ aside {
     grid-area: msg;
 }
 
-main {
+body > main {
     grid-area: feed;
     padding: 40px;
 }

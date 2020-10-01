@@ -1,9 +1,11 @@
 import renderContentText from './renderContentText.js';
 import renderContentGallery from './renderContentGallery.js';
 
-function renderContent() {
+function renderContent(data) {
+    console.log(data);
+
     return `<div>
-                ${renderContentText()}
+                ${renderContentText(data.text)}
                 ${renderContentGallery()}
             </div>`;
 }
