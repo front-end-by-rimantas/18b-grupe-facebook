@@ -1,3 +1,5 @@
+import renderSinglePost from './renderSinglePost.js';
+
 function renderPosts(data) {
     // validacija
 
@@ -6,26 +8,13 @@ function renderPosts(data) {
 
     for (let i = 0; i < data.length; i++) {
         const post = data[i];
-        HTML += `<div class="post">
-                    <header>
-                        ${post.author.name} ${post.author.lastname}
-                    </header>
-                    <div>
-                        ${post.content.text}
-                    </div>
-                    <footer>
-                        LIKE + COMMENT
-                    </footer>
-                </div>`;
+        HTML += renderSinglePost(post);
     }
 
     // susirandame elementa, kuriame norime perrasyti turini
     const feedDOM = document.querySelector('main');
-    console.log(feedDOM);
 
     // i ta elementa ikeliame HTML kintamojo reiksme
-    console.log(feedDOM.innerHTML);
-
     feedDOM.innerHTML = HTML;
 }
 
