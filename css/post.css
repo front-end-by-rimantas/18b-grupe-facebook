@@ -11,3 +11,16 @@
         .post > .post-header > .avatar {
             width: 100%;
         }
+
+.big-size {
+    font-size: 32px;
+    line-height: 32px;
+}
+
+.more {
+    color: #36f;
+    cursor: pointer;
+}
+    .more:hover {
+        text-decoration: underline;
+    }
