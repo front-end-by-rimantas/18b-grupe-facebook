@@ -17,7 +17,7 @@ function renderContent(data) {
         textHTML = renderContentText(data.text);
     }
 
-    return `<div>
+    return `<div class="content">
                 ${textHTML}
                 ${photosHTML}
             </div>`;
