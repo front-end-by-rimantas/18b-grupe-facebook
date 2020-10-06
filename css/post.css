@@ -74,7 +74,8 @@
             .post > .content > .gallery.gallery-4 > .img:first-of-type {
                 height: 100%;
             }
-            .post > .content > .gallery > .img > .extra {
+            .post > .content > .gallery > .img[data-extra]::before {
+                content: '+'attr(data-extra);
                 display: flex;
                 align-items: center;
                 justify-content: center;
