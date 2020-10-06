@@ -21,6 +21,15 @@
         font-size: 32px;
         line-height: 32px;
     }
+    .post > .content > p.hidden {
+        display: none;
+    }
+    .post > .content.show > p {
+        display: none;
+    }
+    .post > .content.show > p.hidden {
+        display: inline-block;
+    }
 
     .post > .content > p > .more {
         color: #36f;
