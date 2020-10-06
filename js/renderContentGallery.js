@@ -6,23 +6,31 @@ function renderContentGallery(data) {
     }
 
     // logika
-    const maxGallerySize = 2;
+    const maxGallerySize = 4;
     const totalPhotosCount = data.length;
     const visiblePhotoCount = totalPhotosCount > maxGallerySize ? maxGallerySize : totalPhotosCount;
-
-    let imagesHTML = '';
-    for (let i = 0; i < visiblePhotoCount; i++) {
-        imagesHTML += `<img src="./img/posts/${data[i]}" alt="User post gallery picture">`;
-    }
 
     let extraHTML = '';
     if (totalPhotosCount > maxGallerySize) {
         extraHTML = `<div class="extra">+${totalPhotosCount - maxGallerySize}</div>`;
     }
 
+    let imagesHTML = '';
+    for (let i = 0; i < visiblePhotoCount; i++) {
+        if (i === visiblePhotoCount - 1) {
+            imagesHTML += `<div class="img">
+                                <img src="./img/posts/${data[i]}" alt="User post gallery picture">
+                                ${extraHTML}
+                            </div>`;
+        } else {
+            imagesHTML += `<div class="img">
+                                <img src="./img/posts/${data[i]}" alt="User post gallery picture">
+                            </div>`;
+        }
+    }
+
     return `<div class="gallery gallery-${visiblePhotoCount}">
                 ${imagesHTML}
-                ${extraHTML}
             </div>`;
 }
 
