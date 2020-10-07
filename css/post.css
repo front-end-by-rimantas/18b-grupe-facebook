@@ -21,6 +21,21 @@
         font-size: 32px;
         line-height: 32px;
     }
+    .post > .content > p.background {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 240px;
+        padding: 20px;
+        text-align: center;
+    }
+    .post > .content > p.red {
+        background-color: red;
+        color: #fff;
+    }
+    .post > .content > p.orange {
+        background-color: orange;
+    }
     .post > .content > p.hidden {
         display: none;
     }
@@ -31,11 +46,13 @@
         display: inline-block;
     }
 
-    .post > .content > p > .more {
+    .post > .content > p > .more,
+    .post > .content > p > .less {
         color: #36f;
         cursor: pointer;
     }
-        .post > .content > p > .more:hover {
+        .post > .content > p > .more:hover,
+        .post > .content > p > .less:hover {
             text-decoration: underline;
         }
     .post > .content > .gallery {
