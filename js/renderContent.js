@@ -2,7 +2,6 @@ import renderContentText from './renderContentText.js';
 import renderContentGallery from './renderContentGallery.js';
 
 function renderContent(data) {
-    console.log(data);
     if (!data) {
         console.error('ERROR: negautas post turini aprasantis objektas');
         return '';
